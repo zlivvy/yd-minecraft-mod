@@ -18,7 +18,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.block.Block;
 import net.minecraftforge.common.MinecraftForge;
 
-/* Test save */
+
 /* 	MOD INFO */
 	@Mod( modid = "mymod", name = "My Awesome Mod", version = "1.0")
 	@NetworkMod(clientSideRequired=true, serverSideRequired=false)	
