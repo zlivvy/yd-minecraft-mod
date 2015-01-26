@@ -67,7 +67,15 @@ public class Main {
 /**	
  * RECIPES SECTION 
  * *********************************************************** */
-
+//  SWORD RECIPE  
+    GameRegistry.addRecipe(new ItemStack(MySword_1, 1), new Object[]
+    {
+            " X ",
+            " X ",
+            " S ",
+        'S', Item.stick,
+        'X', Item.blazeRod,
+    });
 
 
 	
