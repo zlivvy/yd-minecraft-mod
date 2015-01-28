@@ -72,7 +72,7 @@ public class Main {
     {
             "XXX",
             "XXX",
-            " S",
+            " S ",
         'S', Item.stick,
         'X', Item.diamond,
     });
