@@ -74,7 +74,7 @@ public class Main {
             "XXX",
             " S",
         'S', Item.stick,
-        'X', Item.ingotGold,
+        'X', Item.diamond,
     });
 
 
