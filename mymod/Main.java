@@ -70,11 +70,11 @@ public class Main {
 //  SWORD RECIPE  
     GameRegistry.addRecipe(new ItemStack(MySword_1, 1), new Object[]
     {
-            " X ",
-            " X ",
-            " S ",
+            "XXX",
+            "XXX",
+            " S",
         'S', Item.stick,
-        'X', Item.blazeRod,
+        'X', Item.ingotGold,
     });
 
 
