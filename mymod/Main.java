@@ -1,5 +1,6 @@
 package mymod;
 
+import mymod.items.MySword;
 import mymod.proxies.CommonProxy;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
@@ -34,7 +35,8 @@ public class Main {
 /**	
  * DECLARATION SECTION 
  * *********************************************************** */
-
+//  DECLARE THE SWORD 
+    public static Item MySword_1;
 
 
 
@@ -47,7 +49,10 @@ public class Main {
 /**	
  * LOAD SECTION 
  * *********************************************************** */ 
-
+//  LOAD THE SWORD
+    MySword_1 = new MySword(2021, EnumToolMaterial.IRON, "MySword_1");
+    GameRegistry.registerItem(MySword_1, "MySword_1");
+    LanguageRegistry.addName(MySword_1, "Ultimate Element Sword");
 
 
 	
@@ -62,7 +67,15 @@ public class Main {
 /**	
  * RECIPES SECTION 
  * *********************************************************** */
-
+//  SWORD RECIPE  
+    GameRegistry.addRecipe(new ItemStack(MySword_1, 1), new Object[]
+    {
+            "XXX",
+            "XXX",
+            " S ",
+        'S', Item.stick,
+        'X', Item.diamond,
+    });
 
 
 	
