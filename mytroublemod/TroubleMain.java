@@ -25,7 +25,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 /*
  *	MOD INFO
  */
-		@Mod( modid = "troublemod", name = Troublesome Mod", version = "T.S.")
+		@Mod( modid = "troublemod", name = "Troublesome Mod", version = "T.S.")
 		@NetworkMod(clientSideRequired=true, serverSideRequired=false)	
 
 
@@ -37,7 +37,7 @@ public class TroubleMain {
  */
 
 	//  DECLARE THE SWORD 
-		public static item TroubleSword_1;
+		public static Item TroubleSword_1;
 		
 /*
  * -------------------------------------------------------------	
@@ -75,7 +75,7 @@ public static void init( FMLInitializationEvent event )
 	    {
 	            " S ",
 	            " S ",
-	            "X     ",
+	            " X ",
 	        'T', Item.sugar,
 	        'X', Item.stick,
 	    });
