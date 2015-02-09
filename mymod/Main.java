@@ -93,7 +93,7 @@ public class Main {
             " S ",
             " S ",
         'S', Item.stick,
-        'X', Item.blazeRod,
+        'X', Item.diamond,
     });
 
 
