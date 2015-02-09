@@ -1,5 +1,6 @@
 package mymod;
 
+import mymod.items.MyPickaxe;
 import mymod.items.MySword;
 import mymod.proxies.CommonProxy;
 import net.minecraft.item.EnumToolMaterial;
@@ -38,6 +39,8 @@ public class Main {
 //  DECLARE THE SWORD 
     public static Item MySword_1;
 
+//  DECLARE THE PICKAXE 
+    public static Item MyPickaxe_1;
 
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */	
@@ -53,6 +56,11 @@ public class Main {
     MySword_1 = new MySword(2021, EnumToolMaterial.IRON, "MySword_1");
     GameRegistry.registerItem(MySword_1, "MySword_1");
     LanguageRegistry.addName(MySword_1, "Ultimate Element Sword");
+    
+//  LOAD THE PICKAXE
+    MyPickaxe_1 = new MyPickaxe(2022, EnumToolMaterial.IRON, "MyPickaxe_1");
+    GameRegistry.registerItem(MyPickaxe_1, "MyPickaxe_1");
+    LanguageRegistry.addName(MyPickaxe_1, "Rainbow Pickaxe");
 
 
 	
@@ -72,6 +80,17 @@ public class Main {
     {
             "XXX",
             "XXX",
+            " S ",
+        'S', Item.stick,
+        'X', Item.diamond,
+    });
+    
+
+    //  PICKAXE RECIPE  
+    GameRegistry.addRecipe(new ItemStack(MyPickaxe_1, 1), new Object[]
+    {
+            "XXX",
+            " S ",
             " S ",
         'S', Item.stick,
         'X', Item.diamond,
