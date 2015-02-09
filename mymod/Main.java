@@ -60,7 +60,7 @@ public class Main {
 //  LOAD THE PICKAXE
     MyPickaxe_1 = new MyPickaxe(2022, EnumToolMaterial.IRON, "MyPickaxe_1");
     GameRegistry.registerItem(MyPickaxe_1, "MyPickaxe_1");
-    LanguageRegistry.addName(MyPickaxe_1, "My Awesome Pickaxe");
+    LanguageRegistry.addName(MyPickaxe_1, "Rainbow Pickaxe");
 
 
 	
