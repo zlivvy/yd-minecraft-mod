@@ -36,11 +36,16 @@ public class Main {
 /**	
  * DECLARATION SECTION 
  * *********************************************************** */
+	
 //  DECLARE THE SWORD 
     public static Item MySword_1;
 
 //  DECLARE THE PICKAXE 
     public static Item MyPickaxe_1;
+    
+//  DECLARE NEW TOOL MATERIAL
+    /** Harvest Level, Max Uses, Efficiency (f), Damage (f), Enchantability */ 
+    public static EnumToolMaterial MyToolMaterial = EnumHelper.addToolMaterial("Rainbow", 3, 600, 12.0F, 18.0F, 24);
 
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */	
@@ -53,12 +58,12 @@ public class Main {
  * LOAD SECTION 
  * *********************************************************** */ 
 //  LOAD THE SWORD
-    MySword_1 = new MySword(2021, EnumToolMaterial.IRON, "MySword_1");
+    MySword_1 = new MySword(2021, MyToolMaterial, "MySword_1");
     GameRegistry.registerItem(MySword_1, "MySword_1");
     LanguageRegistry.addName(MySword_1, "Ultimate Element Sword");
     
 //  LOAD THE PICKAXE
-    MyPickaxe_1 = new MyPickaxe(2022, EnumToolMaterial.IRON, "MyPickaxe_1");
+    MyPickaxe_1 = new MyPickaxe(2022, MyToolMaterial, "MyPickaxe_1");
     GameRegistry.registerItem(MyPickaxe_1, "MyPickaxe_1");
     LanguageRegistry.addName(MyPickaxe_1, "Rainbow Pickaxe");
 
