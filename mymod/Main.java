@@ -45,7 +45,7 @@ public class Main {
     
 //  DECLARE NEW TOOL MATERIAL
     /** Harvest Level, Max Uses, Efficiency (f), Damage (f), Enchantability */ 
-    public static EnumToolMaterial MyToolMaterial = EnumHelper.addToolMaterial("Awesomeness", 3, 1561, 8.0F, 3.0F, 10);
+    public static EnumToolMaterial MyToolMaterial = EnumHelper.addToolMaterial("Rainbow", 3, 600, 12.0F, 18.0F, 24);
 
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */	
