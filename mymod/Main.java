@@ -36,11 +36,15 @@ public class Main {
 /**	
  * DECLARATION SECTION 
  * *********************************************************** */
+	
 //  DECLARE THE SWORD 
     public static Item MySword_1;
 
 //  DECLARE THE PICKAXE 
     public static Item MyPickaxe_1;
+    
+//  DECLARE NEW TOOL MATERIAL
+    public static EnumToolMaterial MyToolMaterial = EnumHelper.addToolMaterial("Awesomeness", 3, 1561, 8.0F, 3.0F, 10);
 
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */	
