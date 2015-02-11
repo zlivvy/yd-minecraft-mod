@@ -58,12 +58,12 @@ public class Main {
  * LOAD SECTION 
  * *********************************************************** */ 
 //  LOAD THE SWORD
-    MySword_1 = new MySword(2021, MyToolMaterial.IRON, "MySword_1");
+    MySword_1 = new MySword(2021, MyToolMaterial, "MySword_1");
     GameRegistry.registerItem(MySword_1, "MySword_1");
     LanguageRegistry.addName(MySword_1, "Ultimate Element Sword");
     
 //  LOAD THE PICKAXE
-    MyPickaxe_1 = new MyPickaxe(2022, MyToolMaterial.IRON, "MyPickaxe_1");
+    MyPickaxe_1 = new MyPickaxe(2022, MyToolMaterial, "MyPickaxe_1");
     GameRegistry.registerItem(MyPickaxe_1, "MyPickaxe_1");
     LanguageRegistry.addName(MyPickaxe_1, "Rainbow Pickaxe");
 
