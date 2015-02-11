@@ -44,6 +44,7 @@ public class Main {
     public static Item MyPickaxe_1;
     
 //  DECLARE NEW TOOL MATERIAL
+    /** Harvest Level, Max Uses, Efficiency (f), Damage (f), Enchantability */ 
     public static EnumToolMaterial MyToolMaterial = EnumHelper.addToolMaterial("Awesomeness", 3, 1561, 8.0F, 3.0F, 10);
 
 
