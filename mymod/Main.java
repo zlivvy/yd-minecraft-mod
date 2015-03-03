@@ -74,9 +74,9 @@ public class Main {
 
     
 //  LOAD THE ITEM
-    MyItem_1 = new MyItem(2030, "MyItem_1").setCreativeTab(CreativeTabs.tabMisc);
+    MyItem_1 = new MyItem(2030, "MyItem_1").setCreativeTab(CreativeTabs.tabFood);
     GameRegistry.registerItem(MyItem_1, "MyItem_1");
-    LanguageRegistry.addName(MyItem_1, "My Really Awesome Item");
+    LanguageRegistry.addName(MyItem_1, "Rainbow Popsicle");
 
 	
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */	
