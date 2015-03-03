@@ -115,10 +115,11 @@ public class Main {
     //  ITEM RECIPE         
     GameRegistry.addRecipe(new ItemStack(MyItem_1, 1), new Object[]
     {
-            "S S",
-            " S ",
-            "S S",
-        'S', Item.stick,
+            "SSS",
+            "XXX",
+            "SSS",
+        'S', Block.ice,
+        'X', Item.sugar,
     });
 
 
