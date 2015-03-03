@@ -74,7 +74,7 @@ public class Main {
 
     
 //  LOAD THE ITEM
-    MyItem_1 = new MyItem(2030, "MyItem_1").setCreativeTab(CreativeTabs.tabFood);
+    MyItem_1 = new MyItem(2030, "MyItem_1").setCreativeTab(CreativeTabs.tabFood).setMaxStackSize(16);
     GameRegistry.registerItem(MyItem_1, "MyItem_1");
     LanguageRegistry.addName(MyItem_1, "Rainbow Popsicle");
 
