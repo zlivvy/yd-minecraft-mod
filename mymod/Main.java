@@ -76,7 +76,7 @@ public class Main {
 //  LOAD THE ITEM
     MyItem_1 = new MyItem(2030, "MyItem_1").setCreativeTab(CreativeTabs.tabFood).setMaxStackSize(16);
     GameRegistry.registerItem(MyItem_1, "MyItem_1");
-    LanguageRegistry.addName(MyItem_1, "Rainbow Popsicle");
+    LanguageRegistry.addName(MyItem_1, "Rainbow Drop");
 
 	
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */	
@@ -115,11 +115,11 @@ public class Main {
     //  ITEM RECIPE         
     GameRegistry.addRecipe(new ItemStack(MyItem_1, 1), new Object[]
     {
-            "SSS",
-            "XXX",
-            "SSS",
-        'S', Block.ice,
-        'X', Item.sugar,
+            "S S",
+            " S ",
+            "S S",
+        'S', Block.waterMoving,
+       
     });
 
 
