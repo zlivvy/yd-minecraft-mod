@@ -1,5 +1,6 @@
 package mymod;
 
+import mymod.items.MyItem;
 import mymod.items.MyPickaxe;
 import mymod.items.MySword;
 import mymod.proxies.CommonProxy;
@@ -47,6 +48,9 @@ public class Main {
     /** Harvest Level, Max Uses, Efficiency (f), Damage (f), Enchantability */ 
     public static EnumToolMaterial MyToolMaterial = EnumHelper.addToolMaterial("Rainbow", 3, 600, 12.0F, 18.0F, 24);
 
+    
+//  DECLARE THE ITEM
+    public static Item MyItem_1;
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */	
 
@@ -62,11 +66,17 @@ public class Main {
     GameRegistry.registerItem(MySword_1, "MySword_1");
     LanguageRegistry.addName(MySword_1, "Ultimate Element Sword");
     
+    
 //  LOAD THE PICKAXE
     MyPickaxe_1 = new MyPickaxe(2022, MyToolMaterial, "MyPickaxe_1");
     GameRegistry.registerItem(MyPickaxe_1, "MyPickaxe_1");
     LanguageRegistry.addName(MyPickaxe_1, "Rainbow Pickaxe");
 
+    
+//  LOAD THE ITEM
+    MyItem_1 = new MyItem(2030, "MyItem_1").setCreativeTab(CreativeTabs.tabFood).setMaxStackSize(16);
+    GameRegistry.registerItem(MyItem_1, "MyItem_1");
+    LanguageRegistry.addName(MyItem_1, "Rainbow Popsicle");
 
 	
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */	
@@ -99,6 +109,17 @@ public class Main {
             " S ",
         'S', Item.stick,
         'X', Item.diamond,
+    });
+    
+    
+    //  ITEM RECIPE         
+    GameRegistry.addRecipe(new ItemStack(MyItem_1, 1), new Object[]
+    {
+            "SSS",
+            "XXX",
+            "SSS",
+        'S', Block.ice,
+        'X', Item.sugar,
     });
 
 
