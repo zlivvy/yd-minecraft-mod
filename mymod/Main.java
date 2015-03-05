@@ -97,7 +97,7 @@ public class Main {
             "XXX",
             " S ",
         'S', Item.stick,
-        'X', Item.diamond,
+        'X', MyItem_1,
     });
     
 
@@ -108,7 +108,7 @@ public class Main {
             " S ",
             " S ",
         'S', Item.stick,
-        'X', Item.diamond,
+        'X', MyItem_1,
     });
     
     
