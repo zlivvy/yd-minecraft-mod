@@ -86,7 +86,7 @@ public class Main {
 //  LOAD THE FOOD
     MyFood_1 = new MyFood(2040, 3, 3.0F, true, "MyFood_1");
     GameRegistry.registerItem(MyFood_1, "MyFood_1");
-    LanguageRegistry.addName(MyFood_1, "My Awesome Food"); 
+    LanguageRegistry.addName(MyFood_1, "Rainbow Popcicle"); 
 	
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */	
 
@@ -135,10 +135,11 @@ public class Main {
 //  FOOD RECIPE         
     GameRegistry.addRecipe(new ItemStack(MyFood_1, 1), new Object[]
     {
-            "SSS",
-            " S ",
-            "SSS",
-        'S', Item.stick,
+            "XS",
+            "SX",
+        'S', MyItem_1,
+        'X', Block.ice
+    
     });
 
 
