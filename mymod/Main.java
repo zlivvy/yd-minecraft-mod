@@ -84,7 +84,7 @@ public class Main {
 
     
 //  LOAD THE FOOD
-    MyFood_1 = new MyFood(2040, 3, 3.0F, true, "MyFood_1");
+    MyFood_1 = new MyFood(2040, 3, 3.0F, true, "MyFood_1").setAlwaysEdible();
     GameRegistry.registerItem(MyFood_1, "MyFood_1");
     LanguageRegistry.addName(MyFood_1, "Rainbow Popcicle"); 
 	
