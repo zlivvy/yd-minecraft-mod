@@ -1,5 +1,6 @@
 package mymod;
 
+import mymod.items.MyFood;
 import mymod.items.MyItem;
 import mymod.items.MyPickaxe;
 import mymod.items.MySword;
@@ -51,6 +52,9 @@ public class Main {
     
 //  DECLARE THE ITEM
     public static Item MyItem_1;
+    
+//  DECLARE THE FOOD
+    public static Item MyFood_1;
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */	
 
@@ -78,6 +82,11 @@ public class Main {
     GameRegistry.registerItem(MyItem_1, "MyItem_1");
     LanguageRegistry.addName(MyItem_1, "Rainbow Drop");
 
+    
+//  LOAD THE FOOD
+    MyFood_1 = new MyFood(2040, 3, 3.0F, true, "MyFood_1");
+    GameRegistry.registerItem(MyFood_1, "MyFood_1");
+    LanguageRegistry.addName(MyFood_1, "My Awesome Food"); 
 	
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */	
 
@@ -120,6 +129,16 @@ public class Main {
             "S S",
         'S', Block.waterMoving,
        
+    });
+    
+    
+//  FOOD RECIPE         
+    GameRegistry.addRecipe(new ItemStack(MyFood_1, 1), new Object[]
+    {
+            "SSS",
+            " S ",
+            "SSS",
+        'S', Item.stick,
     });
 
 
