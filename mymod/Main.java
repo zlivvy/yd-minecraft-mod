@@ -1,5 +1,6 @@
 package mymod;
 
+import mymod.blocks.MyBlock;
 import mymod.items.MyFood;
 import mymod.items.MyItem;
 import mymod.items.MyPickaxe;
@@ -20,6 +21,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraftforge.common.MinecraftForge;
 
 
@@ -49,12 +51,14 @@ public class Main {
     /** Harvest Level, Max Uses, Efficiency (f), Damage (f), Enchantability */ 
     public static EnumToolMaterial MyToolMaterial = EnumHelper.addToolMaterial("Rainbow", 3, 600, 12.0F, 18.0F, 24);
 
-    
-//  DECLARE THE ITEM
+    //  DECLARE THE ITEM
     public static Item MyItem_1;
     
 //  DECLARE THE FOOD
     public static Item MyFood_1;
+    
+//  DECLARE THE BLOCK
+    public static Block MyBlock_1;
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */	
 
@@ -88,6 +92,13 @@ public class Main {
     MyFood_1 = new MyFood(2040, 10, 10.0F, true, "MyFood_1").setAlwaysEdible().setCreativeTab(CreativeTabs.tabFood);
     GameRegistry.registerItem(MyFood_1, "MyFood_1");
     LanguageRegistry.addName(MyFood_1, "Rainbow Popcicle"); 
+    
+
+    //  LOAD THE BLOCK 
+    MyBlock_1 = new MyBlock(250, Material.rock, "MyBlock_1");
+    GameRegistry.registerBlock(MyBlock_1, "MyBlock_1");
+    LanguageRegistry.addName(MyBlock_1, "Cloud"); 
+	MinecraftForge.setBlockHarvestLevel(MyBlock_1, "pickaxe", 0);
 	
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */	
 
@@ -142,6 +153,10 @@ public class Main {
         'X', Block.ice
     
     });
+    
+    
+//  SMELTING RECIPE
+    GameRegistry.addSmelting(MyBlock_1.blockID, (new ItemStack(MyItem_1, 1)), 10);
 
 
 	
