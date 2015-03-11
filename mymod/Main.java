@@ -156,7 +156,7 @@ public class Main {
     
     
 //  SMELTING RECIPE
-    GameRegistry.addSmelting(MyBlock_1.blockID, (new ItemStack(MyItem_1, 1)), 10);
+    GameRegistry.addSmelting(MyBlock_1.blockID, (new ItemStack(MyBlock_1, 1)), 1);
 
 
 	
