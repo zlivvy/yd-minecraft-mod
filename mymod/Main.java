@@ -95,7 +95,7 @@ public class Main {
     
 
     //  LOAD THE BLOCK 
-    MyBlock_1 = new MyBlock(250, Material.rock, "MyBlock_1").setLightValue(0.9375F).setResistance(5.0F).setHardness(0.5F);
+    MyBlock_1 = new MyBlock(250, Material.rock, "MyBlock_1").setLightValue(0.9375F).setResistance(5.0F).setHardness(0.5F).setStepSound(Block.soundSnowFootstep);
     GameRegistry.registerBlock(MyBlock_1, "MyBlock_1");
     LanguageRegistry.addName(MyBlock_1, "Cloud"); 
 	MinecraftForge.setBlockHarvestLevel(MyBlock_1, "pickaxe", 0);
