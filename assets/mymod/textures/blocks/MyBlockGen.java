@@ -26,7 +26,7 @@ public class MyBlockGen implements IWorldGenerator {
             int Xcoord = BlockX + random.nextInt(16);
             int Zcoord = BlockZ + random.nextInt(16);
             int Ycoord = random.nextInt(256); 
-            (new WorldGenMinable(Main.MyBlock_1.blockID, 16)).generate(world, random, Xcoord, Ycoord, Zcoord);
+            (new WorldGenMinable(Main.MyBlock_1.blockID, 6)).generate(world, random, Xcoord, Ycoord, Zcoord);
         }
     }
     
