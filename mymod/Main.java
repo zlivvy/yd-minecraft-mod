@@ -113,22 +113,22 @@ public class Main {
 //  LOAD HELMET 
     MyHelmet_1 = new MyArmor(2060, EnumArmorMaterial.IRON, 0, 0, "myarmor");
     GameRegistry.registerItem(MyHelmet_1, "MyHelmet_1");
-    LanguageRegistry.addName(MyHelmet_1, "My Awesome Helmet");      
+    LanguageRegistry.addName(MyHelmet_1, "Rainbow Helmet");      
 
 //LOAD CHESTPLATE
     MyChest_1 = new MyArmor(2061, EnumArmorMaterial.IRON, 0, 1, "myarmor");
     GameRegistry.registerItem(MyChest_1, "MyChest_1");
-    LanguageRegistry.addName(MyChest_1, "My Awesome Chest");
+    LanguageRegistry.addName(MyChest_1, "Rainbow Chestplate");
 
 //LOAD LEGGINGS    
     MyLeggings_1 = new MyArmor(2062, EnumArmorMaterial.IRON, 0, 2, "myarmor");
     GameRegistry.registerItem(MyLeggings_1, "MyLeggings_1");
-    LanguageRegistry.addName(MyLeggings_1, "My Awesome Leggings");
+    LanguageRegistry.addName(MyLeggings_1, "Rainbow Leggings");
 
 //LOAD BOOTS   
     MyBoots_1 = new MyArmor(2063, EnumArmorMaterial.IRON, 0, 3, "myarmor");
     GameRegistry.registerItem(MyBoots_1, "MyBoots_1");
-    LanguageRegistry.addName(MyBoots_1, "My Awesome Boots");
+    LanguageRegistry.addName(MyBoots_1, "Rainbow Boots");
 	
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */	
 
