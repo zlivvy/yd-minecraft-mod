@@ -1,5 +1,6 @@
 package mymod;
 
+import mymod.armor.MyArmor;
 import mymod.blocks.MyBlock;
 import mymod.blocks.MyBlockGen;
 import mymod.items.MyFood;
@@ -7,6 +8,7 @@ import mymod.items.MyItem;
 import mymod.items.MyPickaxe;
 import mymod.items.MySword;
 import mymod.proxies.CommonProxy;
+import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -60,6 +62,12 @@ public class Main {
     
 //  DECLARE THE BLOCK
     public static Block MyBlock_1;
+    
+//  DECLARE THE ARMOR
+    public static Item MyHelmet_1;
+    public static Item MyChest_1;
+    public static Item MyLeggings_1;
+    public static Item MyBoots_1;
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */	
 
@@ -100,6 +108,27 @@ public class Main {
     GameRegistry.registerBlock(MyBlock_1, "MyBlock_1");
     LanguageRegistry.addName(MyBlock_1, "Rainbow Ore"); 
 	MinecraftForge.setBlockHarvestLevel(MyBlock_1, "pickaxe", 0);
+	
+	
+//  LOAD HELMET 
+    MyHelmet_1 = new MyArmor(2060, EnumArmorMaterial.IRON, 0, 0, "myarmor");
+    GameRegistry.registerItem(MyHelmet_1, "MyHelmet_1");
+    LanguageRegistry.addName(MyHelmet_1, "My Awesome Helmet");      
+
+//LOAD CHESTPLATE
+    MyChest_1 = new MyArmor(2061, EnumArmorMaterial.IRON, 0, 1, "myarmor");
+    GameRegistry.registerItem(MyChest_1, "MyChest_1");
+    LanguageRegistry.addName(MyChest_1, "My Awesome Chest");
+
+//LOAD LEGGINGS    
+    MyLeggings_1 = new MyArmor(2062, EnumArmorMaterial.IRON, 0, 2, "myarmor");
+    GameRegistry.registerItem(MyLeggings_1, "MyLeggings_1");
+    LanguageRegistry.addName(MyLeggings_1, "My Awesome Leggings");
+
+//LOAD BOOTS   
+    MyBoots_1 = new MyArmor(2063, EnumArmorMaterial.IRON, 0, 3, "myarmor");
+    GameRegistry.registerItem(MyBoots_1, "MyBoots_1");
+    LanguageRegistry.addName(MyBoots_1, "My Awesome Boots");
 	
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */	
 
@@ -160,7 +189,39 @@ public class Main {
     GameRegistry.addSmelting(MyBlock_1.blockID, (new ItemStack(MyBlock_1, 1)), 1);
 
 
-	
+//  HELMET RECIPE   
+    GameRegistry.addRecipe(new ItemStack(MyHelmet_1, 1), new Object[]
+    {
+            "XXX",
+            "X X",
+        'X', MyItem_1,
+    });         
+
+//  CHESTPLATE RECIPE   
+    GameRegistry.addRecipe(new ItemStack(MyChest_1, 1), new Object[]
+    {
+            "X X",
+            "XXX",
+            "XXX",
+        'X', MyItem_1,
+    });         
+
+//  LEGGINGS RECIPE 
+    GameRegistry.addRecipe(new ItemStack(MyLeggings_1, 1), new Object[]
+    {
+            "XXX",
+            "X X",
+            "X X",
+        'X', MyItem_1,
+    });         
+
+//  BOOTS RECIPE    
+    GameRegistry.addRecipe(new ItemStack(MyBoots_1, 1), new Object[]
+    {
+            "X X",
+            "X X",
+        'X', MyItem_1,
+    });  
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */	
 
