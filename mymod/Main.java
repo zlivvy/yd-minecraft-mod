@@ -70,7 +70,8 @@ public class Main {
     public static Item MyBoots_1;
     
 //  DECLARE THE ARMOR MATERIAL
-    public static EnumArmorMaterial MyArmorMaterial_1 = EnumHelper.addArmorMaterial("Rainbow", 33, new int[]{3, 8, 6, 3}, 10);
+    												/** maxDamageFactor, damageReductionAmountArray, enchantability */
+    public static EnumArmorMaterial MyArmorMaterial_1 = EnumHelper.addArmorMaterial("Rainbow", 100, new int[]{3, 8, 6, 3}, 50);
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */	
 
