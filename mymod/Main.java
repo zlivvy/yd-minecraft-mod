@@ -68,6 +68,9 @@ public class Main {
     public static Item MyChest_1;
     public static Item MyLeggings_1;
     public static Item MyBoots_1;
+    
+//  DECLARE THE ARMOR MATERIAL
+    public static EnumArmorMaterial MyArmorMaterial_1 = EnumHelper.addArmorMaterial("Rainbow", 33, new int[]{3, 8, 6, 3}, 10);
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */	
 
