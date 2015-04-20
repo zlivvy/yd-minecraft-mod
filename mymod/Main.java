@@ -84,7 +84,7 @@ public class Main {
 //  LOAD THE SWORD
     MySword_1 = new MySword(2021, MyToolMaterial, "MySword_1");
     GameRegistry.registerItem(MySword_1, "MySword_1");
-    LanguageRegistry.addName(MySword_1, "Ultimate Element Sword");
+    LanguageRegistry.addName(MySword_1, "Rainbow Sword");
     
     
 //  LOAD THE PICKAXE
