@@ -1,6 +1,7 @@
 package mymod;
 
 import mymod.armor.MyArmor;
+import mymod.biome.MyBiome;
 import mymod.blocks.MyBlock;
 import mymod.blocks.MyBlockGen;
 import mymod.items.MyFood;
@@ -12,6 +13,7 @@ import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.EnumHelper;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -72,6 +74,9 @@ public class Main {
 //  DECLARE THE ARMOR MATERIAL
     												/** maxDamageFactor, damageReductionAmountArray, enchantability */
     public static EnumArmorMaterial MyArmorMaterial_1 = EnumHelper.addArmorMaterial("Rainbow", 100, new int[]{3, 8, 6, 3}, 50);
+    
+//  DECLARE THE BIOME
+    public static  BiomeGenBase MyBiome_1; 
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */	
 
@@ -133,6 +138,33 @@ public class Main {
     MyBoots_1 = new MyArmor(2063, MyArmorMaterial_1, 0, 3, "myarmor");
     GameRegistry.registerItem(MyBoots_1, "MyBoots_1");
     LanguageRegistry.addName(MyBoots_1, "Rainbow Boots");
+    
+//  LOAD BIOME
+    MyBiome_1 = new MyBiome(30);
+    GameRegistry.addBiome(MyBiome_1);
+    
+//REMOVE OTHER BIOMES
+    GameRegistry.removeBiome(BiomeGenBase.beach);
+    GameRegistry.removeBiome(BiomeGenBase.desert);
+    GameRegistry.removeBiome(BiomeGenBase.desertHills);
+    GameRegistry.removeBiome(BiomeGenBase.desertHills);
+    GameRegistry.removeBiome(BiomeGenBase.extremeHills);
+    GameRegistry.removeBiome(BiomeGenBase.extremeHillsEdge);
+    GameRegistry.removeBiome(BiomeGenBase.forest);
+    GameRegistry.removeBiome(BiomeGenBase.forestHills);
+    GameRegistry.removeBiome(BiomeGenBase.frozenOcean);
+    GameRegistry.removeBiome(BiomeGenBase.frozenRiver);
+    GameRegistry.removeBiome(BiomeGenBase.iceMountains);
+    GameRegistry.removeBiome(BiomeGenBase.icePlains);
+    GameRegistry.removeBiome(BiomeGenBase.jungle);
+    GameRegistry.removeBiome(BiomeGenBase.jungleHills);
+    GameRegistry.removeBiome(BiomeGenBase.mushroomIsland);
+    GameRegistry.removeBiome(BiomeGenBase.ocean);
+    GameRegistry.removeBiome(BiomeGenBase.plains);
+    GameRegistry.removeBiome(BiomeGenBase.river);
+    GameRegistry.removeBiome(BiomeGenBase.swampland);
+    GameRegistry.removeBiome(BiomeGenBase.taiga);
+    GameRegistry.removeBiome(BiomeGenBase.taigaHills);
 	
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */	
 
