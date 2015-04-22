@@ -14,7 +14,7 @@ public class MyBiome extends BiomeGenBase
         
         this.setBiomeName("The Rainbow Biome");
         
-        this.topBlock = (byte)Block.grass.blockID;
+        this.topBlock = (byte)Main.MyBlock_1.blockID;
         this.fillerBlock = (byte)Main.MyBlock_1.blockID;
         
         this.theBiomeDecorator.bigMushroomsPerChunk = 10;
