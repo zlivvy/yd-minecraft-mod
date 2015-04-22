@@ -2,6 +2,10 @@ package mymod.biome;
 
 import mymod.Main;
 import net.minecraft.block.Block;
+import net.minecraft.entity.boss.EntityDragon;
+import net.minecraft.entity.monster.EntityCaveSpider;
+import net.minecraft.entity.monster.EntityGiantZombie;
+import net.minecraft.entity.passive.EntityBat;
 import net.minecraft.entity.passive.EntityMooshroom;    
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.biome.SpawnListEntry;
@@ -17,10 +21,13 @@ public class MyBiome extends BiomeGenBase
         this.topBlock = (byte)Main.MyBlock_1.blockID;
         this.fillerBlock = (byte)Main.MyBlock_1.blockID;
         
-        this.theBiomeDecorator.bigMushroomsPerChunk = 10;
-        this.theBiomeDecorator.treesPerChunk = 5;
+        this.theBiomeDecorator.bigMushroomsPerChunk = 15;
+        this.theBiomeDecorator.waterlilyPerChunk = 20;
 
-        this.spawnableCreatureList.add(new SpawnListEntry(EntityMooshroom.class, 25, 4, 8));
+        this.spawnableCreatureList.add(new SpawnListEntry(EntityGiantZombie.class, 5, 1, 2));
+        this.spawnableCreatureList.add(new SpawnListEntry(EntityBat.class, 30, 5, 25));
+        this.spawnableCreatureList.add(new SpawnListEntry(EntityDragon.class, 5, 2, 6));
+        this.spawnableCreatureList.add(new SpawnListEntry(EntityCaveSpider.class, 30, 5, 25));
         
         this.setMinMaxHeight(0.1F, 0.5F);
         this.setTemperatureRainfall(1.5F, 0.2F);
