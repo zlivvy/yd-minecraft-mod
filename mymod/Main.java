@@ -1,20 +1,34 @@
 package mymod;
 
+import java.awt.Color;
+
 import mymod.armor.MyArmor;
 import mymod.biome.MyBiome;
 import mymod.blocks.MyBlock;
 import mymod.blocks.MyBlockGen;
+import mymod.entity.spider.MyEntitySpider;
+import mymod.entity.spider.MyRenderSpider;
 import mymod.items.MyFood;
 import mymod.items.MyItem;
 import mymod.items.MyPickaxe;
 import mymod.items.MySword;
 import mymod.proxies.CommonProxy;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityEggInfo;
+import net.minecraft.entity.EntityList;
+import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.src.ModLoader;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.EnumHelper;
+import net.minecraftforge.common.MinecraftForge;
+import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.SidedProxy;
@@ -22,12 +36,9 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
-import net.minecraftforge.common.MinecraftForge;
 
 
 /* 	MOD INFO */
@@ -77,6 +88,25 @@ public class Main {
     
 //  DECLARE THE BIOME
     public static  BiomeGenBase MyBiome_1; 
+    
+//  DECLARE THE MOB ID
+    static int MyEntityID = 300;
+    
+//  SEARCH FOR UNIQUE ID    
+    public static int getUniqueEntityId() {
+        do {
+            MyEntityID++;
+        }
+        while (EntityList.getStringFromID(MyEntityID) != null);
+        return MyEntityID++;
+    }
+    
+//  DECLARE A NEW EGG
+    public static void registerEntityEgg(Class <? extends Entity> entity, int primaryColor, int secondaryColor) {
+        int id = getUniqueEntityId();
+        EntityList.IDtoClassMapping.put(id, entity);
+        EntityList.entityEggs.put(id, new EntityEggInfo(id, primaryColor, secondaryColor));
+    } 
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */	
 
@@ -165,6 +195,14 @@ public class Main {
     GameRegistry.removeBiome(BiomeGenBase.swampland);
     GameRegistry.removeBiome(BiomeGenBase.taiga);
     GameRegistry.removeBiome(BiomeGenBase.taigaHills);
+    
+//  REGISTER YOUR ENTITY
+    EntityRegistry.registerGlobalEntityID(MyEntitySpider.class, "My Awesome Mob", EntityRegistry.findGlobalUniqueEntityId());
+    EntityRegistry.addSpawn(MyEntitySpider.class, 50, 1, 5, EnumCreatureType.monster, BiomeGenBase.desert); 
+    EntityRegistry.addSpawn(MyEntitySpider.class, 50, 1, 5, EnumCreatureType.monster, MyBiome_1);     
+    registerEntityEgg(MyEntitySpider.class, (new Color(0, 255, 0)).getRGB(), (new Color(255, 0, 0)).getRGB());
+    RenderingRegistry.registerEntityRenderingHandler(MyEntitySpider.class, new MyRenderSpider());
+    ModLoader.addLocalization("entity.My Awesome Mob.name", "My Awesome Mob");
 	
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */	
 
