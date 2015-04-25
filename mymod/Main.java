@@ -202,7 +202,7 @@ public class Main {
     EntityRegistry.addSpawn(MyEntitySpider.class, 50, 1, 5, EnumCreatureType.monster, MyBiome_1);     
     registerEntityEgg(MyEntitySpider.class, (new Color(0, 255, 0)).getRGB(), (new Color(255, 0, 0)).getRGB());
     RenderingRegistry.registerEntityRenderingHandler(MyEntitySpider.class, new MyRenderSpider());
-    ModLoader.addLocalization("entity.My Awesome Mob.name", "My Awesome Mob");
+    ModLoader.addLocalization("entity.My Awesome Mob.name", "Rainbow SpiderPet");
 	
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */	
 
