@@ -175,7 +175,7 @@ public class Main {
     
 //REMOVE OTHER BIOMES
     GameRegistry.removeBiome(BiomeGenBase.beach);
-    GameRegistry.removeBiome(BiomeGenBase.desert);
+    //GameRegistry.removeBiome(BiomeGenBase.desert);
     GameRegistry.removeBiome(BiomeGenBase.desertHills);
     GameRegistry.removeBiome(BiomeGenBase.desertHills);
     GameRegistry.removeBiome(BiomeGenBase.extremeHills);
@@ -184,10 +184,10 @@ public class Main {
     GameRegistry.removeBiome(BiomeGenBase.forestHills);
     GameRegistry.removeBiome(BiomeGenBase.frozenOcean);
     GameRegistry.removeBiome(BiomeGenBase.frozenRiver);
-    GameRegistry.removeBiome(BiomeGenBase.iceMountains);
-    GameRegistry.removeBiome(BiomeGenBase.icePlains);
-    GameRegistry.removeBiome(BiomeGenBase.jungle);
-    GameRegistry.removeBiome(BiomeGenBase.jungleHills);
+    //GameRegistry.removeBiome(BiomeGenBase.iceMountains);
+    //GameRegistry.removeBiome(BiomeGenBase.icePlains);
+    //GameRegistry.removeBiome(BiomeGenBase.jungle);
+    //GameRegistry.removeBiome(BiomeGenBase.jungleHills);
     GameRegistry.removeBiome(BiomeGenBase.mushroomIsland);
     GameRegistry.removeBiome(BiomeGenBase.ocean);
     GameRegistry.removeBiome(BiomeGenBase.plains);
@@ -198,11 +198,15 @@ public class Main {
     
 //  REGISTER YOUR ENTITY
     EntityRegistry.registerGlobalEntityID(MyEntitySpider.class, "Rainbow Spider", EntityRegistry.findGlobalUniqueEntityId());
-    EntityRegistry.addSpawn(MyEntitySpider.class, 50, 1, 5, EnumCreatureType.monster, BiomeGenBase.desert); 
-    EntityRegistry.addSpawn(MyEntitySpider.class, 50, 1, 5, EnumCreatureType.monster, MyBiome_1);     
+    EntityRegistry.addSpawn(MyEntitySpider.class, 70, 5, 25, EnumCreatureType.monster, BiomeGenBase.jungle); 
+    EntityRegistry.addSpawn(MyEntitySpider.class, 70, 5, 25, EnumCreatureType.monster, MyBiome_1);     
+    EntityRegistry.addSpawn(MyEntitySpider.class, 70, 5, 25, EnumCreatureType.monster, BiomeGenBase.desert);
+    EntityRegistry.addSpawn(MyEntitySpider.class, 70, 5, 25, EnumCreatureType.monster, BiomeGenBase.iceMountains);
+    EntityRegistry.addSpawn(MyEntitySpider.class, 70, 5, 25, EnumCreatureType.monster, BiomeGenBase.icePlains); 
+    EntityRegistry.addSpawn(MyEntitySpider.class, 70, 5, 25, EnumCreatureType.monster, BiomeGenBase.jungleHills); 
     registerEntityEgg(MyEntitySpider.class, (new Color(0, 255, 0)).getRGB(), (new Color(255, 0, 0)).getRGB());
     RenderingRegistry.registerEntityRenderingHandler(MyEntitySpider.class, new MyRenderSpider());
-    ModLoader.addLocalization("entity.Rainbow Spider", "Rainbow Spider");
+    ModLoader.addLocalization("entity.Rainbow Spider.name", "Rainbow Spider");
 	
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */	
 
