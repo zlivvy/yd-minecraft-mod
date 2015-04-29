@@ -1,4 +1,4 @@
-package mymod;
+ package mymod;
 
 import java.awt.Color;
 
@@ -197,12 +197,12 @@ public class Main {
     GameRegistry.removeBiome(BiomeGenBase.taigaHills);
     
 //  REGISTER YOUR ENTITY
-    EntityRegistry.registerGlobalEntityID(MyEntitySpider.class, "My Awesome Mob", EntityRegistry.findGlobalUniqueEntityId());
+    EntityRegistry.registerGlobalEntityID(MyEntitySpider.class, "Rainbow Spider", EntityRegistry.findGlobalUniqueEntityId());
     EntityRegistry.addSpawn(MyEntitySpider.class, 50, 1, 5, EnumCreatureType.monster, BiomeGenBase.desert); 
     EntityRegistry.addSpawn(MyEntitySpider.class, 50, 1, 5, EnumCreatureType.monster, MyBiome_1);     
     registerEntityEgg(MyEntitySpider.class, (new Color(0, 255, 0)).getRGB(), (new Color(255, 0, 0)).getRGB());
     RenderingRegistry.registerEntityRenderingHandler(MyEntitySpider.class, new MyRenderSpider());
-    ModLoader.addLocalization("entity.My Awesome Mob.name", "Rainbow SpiderPet");
+    ModLoader.addLocalization("entity.Rainbow Spider", "Rainbow Spider");
 	
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */	
 
