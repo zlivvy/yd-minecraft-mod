@@ -204,7 +204,7 @@ public class Main {
     EntityRegistry.addSpawn(MyEntitySpider.class, 70, 5, 25, EnumCreatureType.monster, BiomeGenBase.iceMountains);
     EntityRegistry.addSpawn(MyEntitySpider.class, 70, 5, 25, EnumCreatureType.monster, BiomeGenBase.icePlains); 
     EntityRegistry.addSpawn(MyEntitySpider.class, 70, 5, 25, EnumCreatureType.monster, BiomeGenBase.jungleHills); 
-    registerEntityEgg(MyEntitySpider.class, (new Color(0, 255, 0)).getRGB(), (new Color(255, 0, 0)).getRGB());
+    registerEntityEgg(MyEntitySpider.class, (new Color(255, 255, 255)).getRGB(), (new Color(255, 255, 255)).getRGB());
     RenderingRegistry.registerEntityRenderingHandler(MyEntitySpider.class, new MyRenderSpider());
     ModLoader.addLocalization("entity.Rainbow Spider.name", "Rainbow Spider");
 	
