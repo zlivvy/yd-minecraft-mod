@@ -70,8 +70,11 @@ public class Main {
     //  DECLARE THE ITEM
     public static Item MyItem_1;
     
-//  DECLARE THE FOOD
+//  DECLARE THE RAINBOW POPCICLE
     public static Item MyFood_1;
+    
+//  DECLARE THE RAINBOW JUICE
+    public static Item MyFood_2;
     
 //  DECLARE THE BLOCK
     public static Block MyBlock_1;
@@ -135,11 +138,18 @@ public class Main {
     LanguageRegistry.addName(MyItem_1, "Rainbow Drop");
 
     
-//  LOAD THE FOOD
+//  LOAD THE RAINBOW POPCICLE
     /** idemID, healAmount, saturationModifier (F), isWolfsFavoriteMeat, Texture Name */
     MyFood_1 = new MyFood(2040, 10, 10.0F, true, "MyFood_1").setAlwaysEdible().setCreativeTab(CreativeTabs.tabFood);
     GameRegistry.registerItem(MyFood_1, "MyFood_1");
     LanguageRegistry.addName(MyFood_1, "Rainbow Popcicle"); 
+    
+    
+//  LOAD THE RAINBOW JUICE
+    /** idemID, healAmount, saturationModifier (F), isWolfsFavoriteMeat, Texture Name */
+    MyFood_2 = new MyFood(2041, 11, 11.0F, true, "MyFood_2").setAlwaysEdible().setCreativeTab(CreativeTabs.tabFood);
+    GameRegistry.registerItem(MyFood_2, "MyFood_2");
+    LanguageRegistry.addName(MyFood_2, "Rainbow Juice");
     
 
     //  LOAD THE BLOCK 
