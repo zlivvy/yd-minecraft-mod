@@ -145,7 +145,7 @@ public class Main {
     LanguageRegistry.addName(MyFood_1, "Rainbow Popcicle"); 
     
     
-//  LOAD THE RAINBOW JUICE
+//  LOAD THE RAINBOW POPCICLE
     /** idemID, healAmount, saturationModifier (F), isWolfsFavoriteMeat, Texture Name */
     MyFood_2 = new MyFood(2041, 11, 11.0F, true, "MyFood_2").setAlwaysEdible().setCreativeTab(CreativeTabs.tabFood);
     GameRegistry.registerItem(MyFood_2, "MyFood_2");
@@ -254,27 +254,39 @@ public class Main {
     //  ITEM RECIPE         
     GameRegistry.addRecipe(new ItemStack(MyItem_1, 1), new Object[]
     {
-            "S S",
-            " S ",
-            "S S",
+            "SSS",
+            "SXS",
+            "SSS",
         'S', Block.waterMoving,
+        'X', Block.glowStone,
        
     });
     
     
-//  FOOD RECIPE         
+//  RAINBOW POPCICLE RECIPE         
     GameRegistry.addRecipe(new ItemStack(MyFood_1, 1), new Object[]
     {
             "XS",
             "SX",
         'S', MyItem_1,
-        'X', Block.ice
+        'X', Block.ice,
+    
+    });
+    
+    
+//  RAINBOW JUICE RECIPE        
+    GameRegistry.addRecipe(new ItemStack(MyFood_1, 1), new Object[]
+    {
+            " S ",
+            "SSS",
+            "SSS",
+        'S', MyItem_1,
     
     });
     
     
 //  SMELTING RECIPE
-    GameRegistry.addSmelting(MyBlock_1.blockID, (new ItemStack(MyBlock_1, 1)), 1);
+    GameRegistry.addSmelting(MyBlock_1.blockID, (new ItemStack(MyItem_1, 1)), 1);
 
 
 //  HELMET RECIPE   
