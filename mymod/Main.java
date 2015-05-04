@@ -209,10 +209,7 @@ public class Main {
 //  REGISTER YOUR ENTITY
     EntityRegistry.registerGlobalEntityID(MyEntitySpider.class, "Rainbow Spider", EntityRegistry.findGlobalUniqueEntityId());
     EntityRegistry.addSpawn(MyEntitySpider.class, 70, 5, 25, EnumCreatureType.monster, BiomeGenBase.jungle); 
-    EntityRegistry.addSpawn(MyEntitySpider.class, 70, 5, 25, EnumCreatureType.monster, MyBiome_1);     
-    EntityRegistry.addSpawn(MyEntitySpider.class, 70, 5, 25, EnumCreatureType.monster, BiomeGenBase.desert);
-    EntityRegistry.addSpawn(MyEntitySpider.class, 70, 5, 25, EnumCreatureType.monster, BiomeGenBase.iceMountains);
-    EntityRegistry.addSpawn(MyEntitySpider.class, 70, 5, 25, EnumCreatureType.monster, BiomeGenBase.icePlains); 
+    EntityRegistry.addSpawn(MyEntitySpider.class, 70, 5, 25, EnumCreatureType.monster, MyBiome_1);      
     EntityRegistry.addSpawn(MyEntitySpider.class, 70, 5, 25, EnumCreatureType.monster, BiomeGenBase.jungleHills); 
     registerEntityEgg(MyEntitySpider.class, (new Color(255, 255, 255)).getRGB(), (new Color(255, 255, 255)).getRGB());
     RenderingRegistry.registerEntityRenderingHandler(MyEntitySpider.class, new MyRenderSpider());
@@ -257,7 +254,7 @@ public class Main {
             "SSS",
             "SXS",
             "SSS",
-        'S', Block.waterMoving,
+        'S', Item.bucketWater,
         'X', Block.glowStone,
        
     });

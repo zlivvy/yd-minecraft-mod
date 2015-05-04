@@ -21,7 +21,6 @@ public class MyBiome extends BiomeGenBase
         this.topBlock = (byte)Main.MyBlock_1.blockID;
         this.fillerBlock = (byte)Main.MyBlock_1.blockID;
         
-        this.theBiomeDecorator.bigMushroomsPerChunk = 15;
         this.theBiomeDecorator.waterlilyPerChunk = 20;
 
         this.spawnableCreatureList.add(new SpawnListEntry(EntityGiantZombie.class, 4, 1, 2));
