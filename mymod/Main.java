@@ -219,12 +219,13 @@ public class Main {
     ModLoader.addLocalization("entity.Rainbow Spider.name", "Rainbow Spider");
     
 //  REGISTER YOUR ENTITY
-    EntityRegistry.registerGlobalEntityID(MyEntityWraith.class, "Wraith", EntityRegistry.findGlobalUniqueEntityId());
-    EntityRegistry.addSpawn(MyEntityWraith.class, 50, 1, 5, EnumCreatureType.monster, BiomeGenBase.desert);  
-    EntityRegistry.addSpawn(MyEntityWraith.class, 50, 1, 5, EnumCreatureType.monster, MyBiome_1);  
-    registerEntityEgg(MyEntityWraith.class, (new Color(15, 2, 10)).getRGB(), (new Color(67, 8, 43)).getRGB());
+    EntityRegistry.registerGlobalEntityID(MyEntityWraith.class, "Raith", EntityRegistry.findGlobalUniqueEntityId());
+    EntityRegistry.addSpawn(MyEntitySpider.class, 70, 5, 25, EnumCreatureType.monster, BiomeGenBase.jungle); 
+    EntityRegistry.addSpawn(MyEntitySpider.class, 70, 5, 25, EnumCreatureType.monster, MyBiome_1);      
+    EntityRegistry.addSpawn(MyEntitySpider.class, 70, 5, 25, EnumCreatureType.monster, BiomeGenBase.jungleHills);  
+    registerEntityEgg(MyEntityWraith.class, (new Color(0, 0, 0)).getRGB(), (new Color(0, 0, 0)).getRGB());
     RenderingRegistry.registerEntityRenderingHandler(MyEntityWraith.class, new MyRenderWraith(new MyModelWraith(), 0.3F));
-    ModLoader.addLocalization("entity.Wraith.name", "Wraith");
+    ModLoader.addLocalization("entity.Raith.name", "Raith");
 	
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */	
 
