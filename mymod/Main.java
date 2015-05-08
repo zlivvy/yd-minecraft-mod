@@ -8,6 +8,9 @@ import mymod.blocks.MyBlock;
 import mymod.blocks.MyBlockGen;
 import mymod.entity.spider.MyEntitySpider;
 import mymod.entity.spider.MyRenderSpider;
+import mymod.entity.wraith.MyEntityWraith;
+import mymod.entity.wraith.MyModelWraith;
+import mymod.entity.wraith.MyRenderWraith;
 import mymod.items.MyFood;
 import mymod.items.MyItem;
 import mymod.items.MyPickaxe;
@@ -214,6 +217,14 @@ public class Main {
     registerEntityEgg(MyEntitySpider.class, (new Color(255, 255, 255)).getRGB(), (new Color(255, 255, 255)).getRGB());
     RenderingRegistry.registerEntityRenderingHandler(MyEntitySpider.class, new MyRenderSpider());
     ModLoader.addLocalization("entity.Rainbow Spider.name", "Rainbow Spider");
+    
+//  REGISTER YOUR ENTITY
+    EntityRegistry.registerGlobalEntityID(MyEntityWraith.class, "Wraith", EntityRegistry.findGlobalUniqueEntityId());
+    EntityRegistry.addSpawn(MyEntityWraith.class, 50, 1, 5, EnumCreatureType.monster, BiomeGenBase.desert);  
+    EntityRegistry.addSpawn(MyEntityWraith.class, 50, 1, 5, EnumCreatureType.monster, MyBiome_1);  
+    registerEntityEgg(MyEntityWraith.class, (new Color(15, 2, 10)).getRGB(), (new Color(67, 8, 43)).getRGB());
+    RenderingRegistry.registerEntityRenderingHandler(MyEntityWraith.class, new MyRenderWraith(new MyModelWraith(), 0.3F));
+    ModLoader.addLocalization("entity.Wraith.name", "Wraith");
 	
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */	
 
