@@ -21,6 +21,7 @@ import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.monster.EntityCreeper;
 import net.minecraft.entity.monster.EntityGhast;
 import net.minecraft.entity.passive.EntityAnimal;
+import net.minecraft.entity.passive.EntityChicken;
 import net.minecraft.entity.passive.EntityHorse;
 import net.minecraft.entity.passive.EntitySheep;
 import net.minecraft.entity.passive.EntityTameable;
@@ -70,7 +71,7 @@ public class MyEntitySpider extends EntityTameable
         this.targetTasks.addTask(1, new EntityAIOwnerHurtByTarget(this));
         this.targetTasks.addTask(2, new EntityAIOwnerHurtTarget(this));
         this.targetTasks.addTask(3, new EntityAIHurtByTarget(this, true));
-        this.targetTasks.addTask(4, new EntityAITargetNonTamed(this, EntitySheep.class, 200, false));
+        this.targetTasks.addTask(4, new EntityAITargetNonTamed(this, EntityChicken.class, 200, false));
         this.setTamed(false);
     }
 
@@ -167,7 +168,7 @@ public class MyEntitySpider extends EntityTameable
      */
     protected String getLivingSound()
     {
-        return this.isAngry() ? "mob.spider.say" : (this.rand.nextInt(3) == 0 ? (this.isTamed() && this.dataWatcher.getWatchableObjectFloat(18) < 10.0F ? "mob.wolf.whine" : "mob.wolf.panting") : "mob.wolf.bark");
+        return this.isAngry() ? "mob.spider.say" : (this.rand.nextInt(3) == 0 ? (this.isTamed() && this.dataWatcher.getWatchableObjectFloat(18) < 10.0F ? "mob.spider.say" : "mob.spider.say") : "mob.spider.say");
     }
 
     /**
@@ -436,7 +437,7 @@ public class MyEntitySpider extends EntityTameable
                 this.setAttackTarget((EntityLivingBase)null);
             }
         }
-        else if (itemstack != null && itemstack.itemID == Item.bone.itemID && !this.isAngry())
+        else if (itemstack != null && itemstack.itemID == Item.silk.itemID && !this.isAngry())
         {
             if (!par1EntityPlayer.capabilities.isCreativeMode)
             {
