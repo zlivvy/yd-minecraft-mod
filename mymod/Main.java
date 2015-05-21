@@ -225,15 +225,15 @@ public class Main {
     
 //  REGISTER YOUR ENTITY
     EntityRegistry.registerGlobalEntityID(MyEntityWraith.class, "Raith", EntityRegistry.findGlobalUniqueEntityId());
-    EntityRegistry.addSpawn(MyEntitySpider.class, 70, 5, 25, EnumCreatureType.monster, BiomeGenBase.jungle); 
-    EntityRegistry.addSpawn(MyEntitySpider.class, 70, 5, 25, EnumCreatureType.monster, MyBiome_1);      
-    EntityRegistry.addSpawn(MyEntitySpider.class, 70, 5, 25, EnumCreatureType.monster, BiomeGenBase.jungleHills);  
+    EntityRegistry.addSpawn(MyEntitySpider.class, 10, 1, 5, EnumCreatureType.monster, BiomeGenBase.jungle); 
+    EntityRegistry.addSpawn(MyEntitySpider.class, 10, 1, 5, EnumCreatureType.monster, MyBiome_1);      
+    EntityRegistry.addSpawn(MyEntitySpider.class, 10, 1, 5, EnumCreatureType.monster, BiomeGenBase.jungleHills);  
     registerEntityEgg(MyEntityWraith.class, (new Color(0, 0, 0)).getRGB(), (new Color(0, 0, 0)).getRGB());
     RenderingRegistry.registerEntityRenderingHandler(MyEntityWraith.class, new MyRenderWraith(new MyModelWraith(), 0.3F));
     ModLoader.addLocalization("entity.Raith.name", "Raith");
 	
 	//	LOAD THE ACHIEVEMENT
-	MyAchievement_1 = new Achievement(2001, "MyAchievement_1", -1, -1, MyItem_1, AchievementList.openInventory).registerAchievement();
+	MyAchievement_1 = new Achievement(2001, "MyAchievement_1", -3, -1, MyBlock_1, AchievementList.openInventory).registerAchievement();
 	//	(id, "NameOfAchievement", x, y coordinates on Achievement map, icon, Required Achievement to unlock)
 	// 	For no Pre-required achievement, use "(Achievement)null"
 	
