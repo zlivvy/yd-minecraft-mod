@@ -234,8 +234,9 @@ public class Main {
     RenderingRegistry.registerEntityRenderingHandler(MyEntityWraith.class, new MyRenderWraith(new MyModelWraith(), 0.3F));
     ModLoader.addLocalization("entity.Raith.name", "Raith");
 	
-	//	LOAD THE ACHIEVEMENT
+	//	LOAD THE ACHIEVEMENTS
 	MyAchievement_1 = new Achievement(2001, "MyAchievement_1", -3, -1, MyBlock_1, AchievementList.openInventory).registerAchievement();
+	MyAchievement_2 = new Achievement(2002, "MyAchievement_2", -3, -1, MyBlock_1, AchievementList.openInventory).registerAchievement();
 	//	(id, "NameOfAchievement", x, y coordinates on Achievement map, icon, Required Achievement to unlock)
 	// 	For no Pre-required achievement, use "(Achievement)null"
 	
@@ -354,9 +355,12 @@ public class Main {
 //  REGISTER THE ORE GENERATION 
     GameRegistry.registerWorldGenerator(new MyBlockGen());
     
-//	CHANGE THE TEXT OF THE ACHIEVEMENT	
+//	CHANGE THE TEXT OF THE ACHIEVEMENTS	
 	LanguageRegistry.instance().addStringLocalization("achievement.MyAchievement_1", "en_US", "Rainbowtastic ORE!");
 	LanguageRegistry.instance().addStringLocalization("achievement.MyAchievement_1.desc", "en_US", "Find some Rainbow Ore!");
+	
+	LanguageRegistry.instance().addStringLocalization("achievement.MyAchievement_2", "en_US", "Rainbowtastic ORE!");
+	LanguageRegistry.instance().addStringLocalization("achievement.MyAchievement_2.desc", "en_US", "Find some Rainbow Ore!");
 
         
 
