@@ -116,9 +116,11 @@ public class Main {
         EntityList.entityEggs.put(id, new EntityEggInfo(id, primaryColor, secondaryColor));
     } 
     
-//	DECLARE A NEW ACHIEVEMENT	
+//	DECLARE THE NEW ACHIEVEMENTS	
 	public static Achievement MyAchievement_1;
+	public static Achievement MyAchievement_2;
 
+	
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */	
 
 
@@ -353,8 +355,8 @@ public class Main {
     GameRegistry.registerWorldGenerator(new MyBlockGen());
     
 //	CHANGE THE TEXT OF THE ACHIEVEMENT	
-	LanguageRegistry.instance().addStringLocalization("achievement.MyAchievement_1", "en_US", "Achievement Name Here");
-	LanguageRegistry.instance().addStringLocalization("achievement.MyAchievement_1.desc", "en_US", "Achievement Instructions Here");
+	LanguageRegistry.instance().addStringLocalization("achievement.MyAchievement_1", "en_US", "Rainbowtastic ORE!");
+	LanguageRegistry.instance().addStringLocalization("achievement.MyAchievement_1.desc", "en_US", "Find some Rainbow Ore!");
 
         
 
