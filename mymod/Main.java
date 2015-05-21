@@ -238,7 +238,7 @@ public class Main {
 	//	LOAD THE ACHIEVEMENTS
 	MyAchievement_1 = new Achievement(2001, "MyAchievement_1", -3, -1, MyBlock_1, AchievementList.openInventory).registerAchievement();
 	MyAchievement_2 = new Achievement(2002, "MyAchievement_2", -5, -1, MyItem_1, MyAchievement_1).registerAchievement();
-	MyAchievement_2 = new Achievement(2002, "MyAchievement_3", -7, -1, MySword_1, MyAchievement_2).registerAchievement();
+	MyAchievement_2 = new Achievement(2003, "MyAchievement_3", -7, -1, MySword_1, MyAchievement_2).registerAchievement();
 	//	(id, "NameOfAchievement", x, y coordinates on Achievement map, icon, Required Achievement to unlock)
 	// 	For no Pre-required achievement, use "(Achievement)null"
 	
