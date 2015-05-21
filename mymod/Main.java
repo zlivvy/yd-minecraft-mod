@@ -119,6 +119,7 @@ public class Main {
 //	DECLARE THE NEW ACHIEVEMENTS	
 	public static Achievement MyAchievement_1;
 	public static Achievement MyAchievement_2;
+	public static Achievement MyAchievement_3;
 
 	
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */	
@@ -236,7 +237,8 @@ public class Main {
 	
 	//	LOAD THE ACHIEVEMENTS
 	MyAchievement_1 = new Achievement(2001, "MyAchievement_1", -3, -1, MyBlock_1, AchievementList.openInventory).registerAchievement();
-	MyAchievement_2 = new Achievement(2002, "MyAchievement_2", -3, -1, MyBlock_1, AchievementList.openInventory).registerAchievement();
+	MyAchievement_2 = new Achievement(2002, "MyAchievement_2", -5, -1, MyItem_1, MyAchievement_1).registerAchievement();
+	MyAchievement_2 = new Achievement(2002, "MyAchievement_3", -7, -1, MySword_1, MyAchievement_2).registerAchievement();
 	//	(id, "NameOfAchievement", x, y coordinates on Achievement map, icon, Required Achievement to unlock)
 	// 	For no Pre-required achievement, use "(Achievement)null"
 	
@@ -359,10 +361,12 @@ public class Main {
 	LanguageRegistry.instance().addStringLocalization("achievement.MyAchievement_1", "en_US", "Rainbowtastic ORE!");
 	LanguageRegistry.instance().addStringLocalization("achievement.MyAchievement_1.desc", "en_US", "Find some Rainbow Ore!");
 	
-	LanguageRegistry.instance().addStringLocalization("achievement.MyAchievement_2", "en_US", "Rainbowtastic ORE!");
-	LanguageRegistry.instance().addStringLocalization("achievement.MyAchievement_2.desc", "en_US", "Find some Rainbow Ore!");
+	LanguageRegistry.instance().addStringLocalization("achievement.MyAchievement_2", "en_US", "Rainbow Drop of AWESOMENESS!");
+	LanguageRegistry.instance().addStringLocalization("achievement.MyAchievement_2.desc", "en_US", "Smelt that Rainbow Ore!");
 
-        
+	LanguageRegistry.instance().addStringLocalization("achievement.MyAchievement_3", "en_US", "Rainbow Blade of DEATH");
+	LanguageRegistry.instance().addStringLocalization("achievement.MyAchievement_3.desc", "en_US", "Craft that Rainbow Sword!");
+ 
 
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */	
