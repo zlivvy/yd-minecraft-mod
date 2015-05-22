@@ -14,7 +14,7 @@ public class MyCraftingHandler implements ICraftingHandler
         
             if (item.itemID == Main.MyItem_1.itemID)
             {
-                player.addStat(Main.MyAchievement_1, 1);
+                player.addStat(Main.MyAchievement_2, 1);
             }
         
         }
@@ -22,9 +22,9 @@ public class MyCraftingHandler implements ICraftingHandler
         @Override
         public void onCrafting(EntityPlayer player, ItemStack item, IInventory craftMatrix) {
             
-            if (item.itemID == Main.MyItem_1.itemID)
+            if (item.itemID == Main.MySword_1.itemID)
             {
-                player.addStat(Main.MyAchievement_1, 1);
+                player.addStat(Main.MyAchievement_3, 1);
             }
             
         }
