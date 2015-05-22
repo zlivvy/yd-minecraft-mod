@@ -11,6 +11,8 @@ import mymod.entity.spider.MyRenderSpider;
 import mymod.entity.wraith.MyEntityWraith;
 import mymod.entity.wraith.MyModelWraith;
 import mymod.entity.wraith.MyRenderWraith;
+import mymod.handlers.MyCraftingHandler;
+import mymod.handlers.MyPickupHandler;
 import mymod.items.MyFood;
 import mymod.items.MyItem;
 import mymod.items.MyPickaxe;
@@ -278,11 +280,11 @@ public class Main {
     //  ITEM RECIPE         
     GameRegistry.addRecipe(new ItemStack(MyItem_1, 1), new Object[]
     {
-            "SSS",
+            "XSX",
             "SXS",
-            "SSS",
+            "XSX",
         'S', Item.bucketWater,
-        'X', Block.glowStone,
+        'X', MyBlock_1,
        
     });
     
@@ -367,6 +369,13 @@ public class Main {
 	LanguageRegistry.instance().addStringLocalization("achievement.MyAchievement_3", "en_US", "Rainbow Blade of DEATH");
 	LanguageRegistry.instance().addStringLocalization("achievement.MyAchievement_3.desc", "en_US", "Craft that Rainbow Sword!");
  
+//  REGISTER PICKUP HANDLER
+    MyPickupHandler MyPickupHandler_1 = new MyPickupHandler();
+    GameRegistry.registerPickupHandler(MyPickupHandler_1);
+    
+//  REGISTER CRAFTING HANDLER
+    MyCraftingHandler MyCraftingHandler_1 = new MyCraftingHandler();
+    GameRegistry.registerCraftingHandler(MyCraftingHandler_1);  
 
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */	
