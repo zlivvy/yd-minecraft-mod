@@ -122,6 +122,9 @@ public class Main {
 	public static Achievement MyAchievement_1;
 	public static Achievement MyAchievement_2;
 	public static Achievement MyAchievement_3;
+	
+//  DECLARE A NEW CREATIVE TAB  
+    public static CreativeTabs MyCreativeTab_1;
 
 	
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */	
@@ -133,62 +136,71 @@ public class Main {
 /**	
  * LOAD SECTION 
  * *********************************************************** */ 
+	
+//  LOAD THE CREATIVE TAB
+    MyCreativeTab_1 = new CreativeTabs("MyCreativeTab_1") {
+        public ItemStack getIconItemStack() {
+            return new ItemStack(MyItem_1, 1, 0);   // Icon, Stack Size, Tab Position
+        }
+    };
+    
+    
 //  LOAD THE SWORD
-    MySword_1 = new MySword(2021, MyToolMaterial, "MySword_1");
+    MySword_1 = new MySword(2021, MyToolMaterial, "MySword_1").setCreativeTab(MyCreativeTab_1);
     GameRegistry.registerItem(MySword_1, "MySword_1");
     LanguageRegistry.addName(MySword_1, "Rainbow Sword");
     
     
 //  LOAD THE PICKAXE
-    MyPickaxe_1 = new MyPickaxe(2022, MyToolMaterial, "MyPickaxe_1");
+    MyPickaxe_1 = new MyPickaxe(2022, MyToolMaterial, "MyPickaxe_1").setCreativeTab(MyCreativeTab_1);
     GameRegistry.registerItem(MyPickaxe_1, "MyPickaxe_1");
     LanguageRegistry.addName(MyPickaxe_1, "Rainbow Pickaxe");
 
     
 //  LOAD THE ITEM
-    MyItem_1 = new MyItem(2030, "MyItem_1").setCreativeTab(CreativeTabs.tabMaterials).setMaxStackSize(16);
+    MyItem_1 = new MyItem(2030, "MyItem_1").setCreativeTab(CreativeTabs.tabMaterials).setMaxStackSize(16).setCreativeTab(MyCreativeTab_1);
     GameRegistry.registerItem(MyItem_1, "MyItem_1");
     LanguageRegistry.addName(MyItem_1, "Rainbow Drop");
 
     
 //  LOAD THE RAINBOW POPCICLE
     /** idemID, healAmount, saturationModifier (F), isWolfsFavoriteMeat, Texture Name */
-    MyFood_1 = new MyFood(2040, 10, 10.0F, true, "MyFood_1").setAlwaysEdible().setCreativeTab(CreativeTabs.tabFood);
+    MyFood_1 = new MyFood(2040, 10, 10.0F, true, "MyFood_1").setAlwaysEdible().setCreativeTab(MyCreativeTab_1);
     GameRegistry.registerItem(MyFood_1, "MyFood_1");
     LanguageRegistry.addName(MyFood_1, "Rainbow Popcicle"); 
     
     
 //  LOAD THE RAINBOW POPCICLE
     /** idemID, healAmount, saturationModifier (F), isWolfsFavoriteMeat, Texture Name */
-    MyFood_2 = new MyFood(2041, 11, 11.0F, true, "MyFood_2").setAlwaysEdible().setCreativeTab(CreativeTabs.tabFood);
+    MyFood_2 = new MyFood(2041, 11, 11.0F, true, "MyFood_2").setAlwaysEdible().setCreativeTab(MyCreativeTab_1);
     GameRegistry.registerItem(MyFood_2, "MyFood_2");
     LanguageRegistry.addName(MyFood_2, "Rainbow Juice");
     
 
     //  LOAD THE BLOCK 
-    MyBlock_1 = new MyBlock(250, Material.rock, "MyBlock_1").setLightValue(0.9375F).setResistance(5.0F).setHardness(3.0F).setStepSound(Block.soundStoneFootstep);
+    MyBlock_1 = new MyBlock(250, Material.rock, "MyBlock_1").setLightValue(0.9375F).setResistance(5.0F).setHardness(3.0F).setStepSound(Block.soundStoneFootstep).setCreativeTab(MyCreativeTab_1);
     GameRegistry.registerBlock(MyBlock_1, "MyBlock_1");
     LanguageRegistry.addName(MyBlock_1, "Rainbow Ore"); 
 	MinecraftForge.setBlockHarvestLevel(MyBlock_1, "pickaxe", 0);
 	
 	
 //  LOAD HELMET 
-    MyHelmet_1 = new MyArmor(2060, MyArmorMaterial_1, 0, 0, "myarmor");
+    MyHelmet_1 = new MyArmor(2060, MyArmorMaterial_1, 0, 0, "myarmor").setCreativeTab(MyCreativeTab_1);
     GameRegistry.registerItem(MyHelmet_1, "MyHelmet_1");
     LanguageRegistry.addName(MyHelmet_1, "Rainbow Helmet");      
 
 //LOAD CHESTPLATE
-    MyChest_1 = new MyArmor(2061, MyArmorMaterial_1, 0, 1, "myarmor");
+    MyChest_1 = new MyArmor(2061, MyArmorMaterial_1, 0, 1, "myarmor").setCreativeTab(MyCreativeTab_1);
     GameRegistry.registerItem(MyChest_1, "MyChest_1");
     LanguageRegistry.addName(MyChest_1, "Rainbow Chestplate");
 
 //LOAD LEGGINGS    
-    MyLeggings_1 = new MyArmor(2062, MyArmorMaterial_1, 0, 2, "myarmor");
+    MyLeggings_1 = new MyArmor(2062, MyArmorMaterial_1, 0, 2, "myarmor").setCreativeTab(MyCreativeTab_1);
     GameRegistry.registerItem(MyLeggings_1, "MyLeggings_1");
     LanguageRegistry.addName(MyLeggings_1, "Rainbow Leggings");
 
 //LOAD BOOTS   
-    MyBoots_1 = new MyArmor(2063, MyArmorMaterial_1, 0, 3, "myarmor");
+    MyBoots_1 = new MyArmor(2063, MyArmorMaterial_1, 0, 3, "myarmor").setCreativeTab(MyCreativeTab_1);
     GameRegistry.registerItem(MyBoots_1, "MyBoots_1");
     LanguageRegistry.addName(MyBoots_1, "Rainbow Boots");
     
@@ -243,6 +255,8 @@ public class Main {
 	MyAchievement_2 = new Achievement(2003, "MyAchievement_3", -7, -1, MySword_1, MyAchievement_2).registerAchievement();
 	//	(id, "NameOfAchievement", x, y coordinates on Achievement map, icon, Required Achievement to unlock)
 	// 	For no Pre-required achievement, use "(Achievement)null"
+	
+
 	
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */	
 
@@ -376,6 +390,10 @@ public class Main {
 //  REGISTER CRAFTING HANDLER
     MyCraftingHandler MyCraftingHandler_1 = new MyCraftingHandler();
     GameRegistry.registerCraftingHandler(MyCraftingHandler_1);  
+    
+//  CHANGE TAB NAME
+    LanguageRegistry.instance().addStringLocalization("itemGroup.MyCreativeTab_1", "en_US", "Rainbowtastic Items");   
+
 
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */	

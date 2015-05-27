@@ -28,7 +28,6 @@ public class MyBiome extends BiomeGenBase
         this.spawnableCreatureList.add(new SpawnListEntry(EntityBat.class, 30, 5, 25));
         this.spawnableCreatureList.add(new SpawnListEntry(EntityDragon.class, 2, 1, 1));
         this.spawnableCreatureList.add(new SpawnListEntry(EntityCaveSpider.class, 15, 5, 10));
-        this.spawnableCreatureList.add(new SpawnListEntry(MyEntityWraith.class, 50, 1, 5));
         
         this.setMinMaxHeight(0.5F, 1.0F);
         this.setTemperatureRainfall(0.4F, 1.5F);
