@@ -49,7 +49,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 
 
 /* 	MOD INFO */
-	@Mod( modid = "mymod", name = "My Awesome Mod", version = "1.0")
+	@Mod( modid = "mymod", name = "The Rainbow Mod", version = "1.0")
 	@NetworkMod(clientSideRequired=true, serverSideRequired=false)	
 
 
