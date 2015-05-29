@@ -5,8 +5,10 @@ import mymod.entity.wraith.MyEntityWraith;
 import net.minecraft.block.Block;
 import net.minecraft.entity.boss.EntityDragon;
 import net.minecraft.entity.monster.EntityCaveSpider;
+import net.minecraft.entity.monster.EntityGhast;
 import net.minecraft.entity.monster.EntityGiantZombie;
 import net.minecraft.entity.passive.EntityBat;
+import net.minecraft.entity.passive.EntityChicken;
 import net.minecraft.entity.passive.EntityMooshroom;    
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.biome.SpawnListEntry;
@@ -27,6 +29,9 @@ public class MyBiome extends BiomeGenBase
         this.spawnableCreatureList.add(new SpawnListEntry(EntityGiantZombie.class, 4, 1, 2));
         this.spawnableCreatureList.add(new SpawnListEntry(EntityBat.class, 30, 5, 25));
         this.spawnableCreatureList.add(new SpawnListEntry(EntityCaveSpider.class, 15, 5, 10));
+        this.spawnableCreatureList.add(new SpawnListEntry(EntityGhast.class, 20, 5, 10));
+        this.spawnableCreatureList.add(new SpawnListEntry(EntityChicken.class, 50, 5, 10));
+        
         
         this.setMinMaxHeight(0.5F, 1.0F);
         this.setTemperatureRainfall(0.4F, 1.5F);
