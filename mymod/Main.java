@@ -243,7 +243,7 @@ public class Main {
 //  REGISTER YOUR ENTITY
     EntityRegistry.registerGlobalEntityID(MyEntityWraith.class, "Raith", EntityRegistry.findGlobalUniqueEntityId());
     EntityRegistry.addSpawn(MyEntityWraith.class, 10, 1, 5, EnumCreatureType.monster, BiomeGenBase.jungle); 
-    EntityRegistry.addSpawn(MyEntityWraith.class, 25, 1, 5, EnumCreatureType.monster, MyBiome_1);      
+    EntityRegistry.addSpawn(MyEntityWraith.class, 70, 1, 5, EnumCreatureType.monster, MyBiome_1);      
     EntityRegistry.addSpawn(MyEntityWraith.class, 10, 1, 5, EnumCreatureType.monster, BiomeGenBase.jungleHills);  
     registerEntityEgg(MyEntityWraith.class, (new Color(0, 0, 0)).getRGB(), (new Color(0, 0, 0)).getRGB());
     RenderingRegistry.registerEntityRenderingHandler(MyEntityWraith.class, new MyRenderWraith(new MyModelWraith(), 0.3F));
