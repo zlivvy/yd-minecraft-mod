@@ -26,14 +26,13 @@ public class MyBiome extends BiomeGenBase
         
         this.theBiomeDecorator.waterlilyPerChunk = 20;
 
-        this.spawnableCreatureList.add(new SpawnListEntry(EntityGiantZombie.class, 4, 1, 2));
-        this.spawnableCreatureList.add(new SpawnListEntry(EntityBat.class, 30, 5, 25));
-        this.spawnableCreatureList.add(new SpawnListEntry(EntityCaveSpider.class, 15, 5, 10));
+        //this.spawnableCreatureList.add(new SpawnListEntry(EntityGiantZombie.class, 4, 1, 2));
+        this.spawnableCreatureList.add(new SpawnListEntry(EntityCaveSpider.class, 20, 5, 10));
         this.spawnableCreatureList.add(new SpawnListEntry(EntityGhast.class, 20, 5, 10));
         this.spawnableCreatureList.add(new SpawnListEntry(EntityChicken.class, 50, 5, 10));
         
         
-        this.setMinMaxHeight(0.5F, 1.0F);
+        this.setMinMaxHeight(0.2F, 1.0F);
         this.setTemperatureRainfall(0.4F, 1.5F);
    
     }

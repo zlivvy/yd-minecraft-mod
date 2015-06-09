@@ -294,10 +294,9 @@ public class Main {
     //  ITEM RECIPE         
     GameRegistry.addRecipe(new ItemStack(MyItem_1, 1), new Object[]
     {
-            "XSX",
-            "SXS",
-            "XSX",
-        'S', Item.bucketWater,
+            
+            "XX",
+            "XX",
         'X', MyBlock_1,
        
     });
@@ -306,10 +305,11 @@ public class Main {
 //  RAINBOW POPCICLE RECIPE         
     GameRegistry.addRecipe(new ItemStack(MyFood_1, 1), new Object[]
     {
-            "XS",
-            "SX",
+    	    "SS",
+            "SS",
+            "XX",
         'S', MyItem_1,
-        'X', Block.ice,
+        'X', Item.stick,
     
     });
     
